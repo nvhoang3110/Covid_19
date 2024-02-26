@@ -481,7 +481,7 @@ frames[0].save('C:\\Users\\tran_\\Desktop\\Germany Covid-19 Project\\Plot\\infec
             duration = 200, loop = 0)
 ```
 
-![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/8400b9283f2f260708da8919dbe69ad172c8675b/Plots/infection_case.gif)
+![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/d17584410e2fb4d5531a5b8ef73d02f91c1fa97d/Plots/infection_case.gif)
 
 ### Future work
 
