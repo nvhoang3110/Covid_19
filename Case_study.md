@@ -425,25 +425,38 @@ for i in date_dat:
 
     # Plot
     ax = plot_dat.plot(column = "cat", categorical = True, cmap = cmap1, 
-                    figsize = (16, 11), linewidth = 0.6,  
+                    figsize = (14, 8), linewidth = 0.6,  
                     edgecolor = "#ffffff", legend = True)
 
-    # Add legend box, texts
+    # Add legend box, text
     ax.legend(title = "7-day prevalence", handles = legend_box, 
-        fontsize = 12, frameon = False, bbox_to_anchor = (0, 0.58), 
-        title_fontproperties = {'weight':'bold', 'size': 12})
+        fontsize = 8, frameon = False, bbox_to_anchor = (0, 0.58), 
+        title_fontproperties = {'weight':'bold', 'size': 8})
     
     ax.text(x = 0.5, y = 0.99, s = title, 
-        fontsize = 18, alpha = 1, ha = 'center', va = 'bottom', weight = "bold", 
+        fontsize = 12, alpha = 1, ha = 'center', va = 'bottom', weight = "bold", 
         transform = ax.transAxes)
     
     plt.text(x = 0.5, y = 0.965, 
         s = "Number of confirmed corona cases in the last 7 days recorded in {} by federal states".format(str(i)), 
         alpha = 0.5, 
-        fontsize = 12, ha = "center", va = 'bottom', transform = ax.transAxes)
+        fontsize = 8, ha = "center", va = 'bottom', transform = ax.transAxes)
 
-    plt.text(x = 0.8, y = 0, s = footer, alpha = 0.5,  # 1.07
-        fontsize = 11, ha = 'center', va = 'bottom', transform = ax.transAxes)
+    plt.figtext(x = 1.40, y = 0, s = footer, alpha = 0.5,  # 1.07
+        fontsize = 8, ha = 'center', va = 'bottom', transform = ax.transAxes)
+
+    # Additional aesthetic modifications
+    plt.axis("off")
+    plt.tight_layout()
+
+    # Provide a file path and save the plot
+    filepath = os.path.join(plot_path, "infection_case{}.png".format(str(i)))
+    
+    chart = ax.get_figure()
+    chart.savefig(filepath, dpi = 100) 
+    
+    k = k + 1
+    plt.close()
 
     # Additional aesthetic modifications
     plt.axis("off")
@@ -455,7 +468,7 @@ for i in date_dat:
     chart = ax.get_figure()
     chart.savefig(filepath, dpi = 100)
     
-    # Add an unit to the counter and finish
+    # Add an unit to the counter and finish plotting
     k = k + 1
 
     plt.close()
@@ -481,7 +494,7 @@ frames[0].save('C:\\Users\\tran_\\Desktop\\Germany Covid-19 Project\\Plot\\infec
             duration = 200, loop = 0)
 ```
 
-![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/d17584410e2fb4d5531a5b8ef73d02f91c1fa97d/Plots/infection_case.gif)
+![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/3ede540ffd0e153473da8cd5ac110515348535af/Plots/infection_case.gif)
 
 ### Future work
 
