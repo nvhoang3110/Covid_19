@@ -27,7 +27,7 @@ import pandas as pd  # For data manipulation and analysis
 import numpy as np  # For numerical computations
 
 # Provide a path to the dataset
-dat_path = "https://github.com/nvhoang3110/Covid_19/blob/59057fba5ec69d2534937ed5f669b97408e8975b/Data/bl_infektionen.csv"
+dat_path = "./bl_infektionen.csv"
 
 # Read the data in Comma separated values (CSV) format
 dat = pd.read_csv(path)
