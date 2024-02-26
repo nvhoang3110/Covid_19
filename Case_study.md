@@ -245,6 +245,8 @@ plt.tight_layout()
 
 plt.show()
 ```
+![Covid-19: 7-day prevalence across the country](https://github.com/nvhoang3110/Covid_19/blob/8400b9283f2f260708da8919dbe69ad172c8675b/Plots/fig2.png)
+
 From our plot, we can see that there are three waves of corona virus: the initial wave occured around the end of 2020 until around June next year. The second wave hit about the same time as the first one, but this time the number of infections soared to a much higher degree and reached the record. The final and last one was relatively mild and short compared to the second, which may likely due to the introduction of multiple type of vaccinations and restriction laws that came into practice. Each wave lasted around 6 to 7 months during the winter time, except for the last one which reached its peak at mid summer and late fall.
 
 #### 7-day prevalence by federal states
@@ -290,6 +292,9 @@ plt.tight_layout()
 
 plt.show()
 ```
+
+![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/8400b9283f2f260708da8919dbe69ad172c8675b/Plots/fig1.png)
+
 So indeed, overall the common trend of the pandemic development does hold true for all federal states, just with different size and magnitude. It is because there are states that are bigger than the others, housing a lot more residents and thus hit more severely by the disease. 
 
 One biggest drawback of this plot is that it is really difficult to observe the development of the pandemic over time for each individual state, since the lines are stacked on top of each other. This can be fixed my plotting each line for each state one by one, so we can still compare them with the silhoutte of the other lines:
@@ -327,6 +332,8 @@ plt.tight_layout(pad = 1.75)
 
 plt.show()
 ```
+![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/8400b9283f2f260708da8919dbe69ad172c8675b/Plots/fig3.png)
+
 Much better. As we stated before, big states with a lot more people like Nordrhein-Westfalen, Baden-Württemberg or Bayern follow the common trend much closer than smaller states such as Bremen or Saarland. In fact, in these states the sign of the first and last wave of Covid-19 is barely visible at all. One possible reason is that we use the same y-axis to house our lines, and since there are states with more and states with less people, though the common trend may hold it is the difference in magnitude that makes us hard to detect the movement of the line in some areas. 
 
 #### Animated choroplethmap
@@ -473,6 +480,8 @@ frames[0].save('C:\\Users\\tran_\\Desktop\\Germany Covid-19 Project\\Plot\\infec
             save_all = True,
             duration = 200, loop = 0)
 ```
+
+![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/8400b9283f2f260708da8919dbe69ad172c8675b/Plots/infection_case.gif)
 
 ### Future work
 
