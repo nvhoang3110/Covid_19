@@ -413,7 +413,7 @@ for a, b in zip(col_plot, categories):
 date_dat = df_merged["datum"].drop_duplicates().dt.strftime("%Y-%m-%d")
 
 # Provide a path to save the plots
-plot_path = "C:\\Users\\tran_\\Desktop\\Germany Covid-19 Project\\Plot\\"
+plot_path = "./Plot/"
 
 # Initial counter
 k = 1
@@ -479,7 +479,7 @@ from PIL import Image
 
 # Create a list of image frames
 frames = []
-imgs = glob.glob("C:\\Users\\tran_\\Desktop\\Germany Covid-19 Project\\Plot\\*.png")
+imgs = glob.glob("/Plot/*.png")
 imgs.sort(key = os.path.getmtime)
 
 for i in imgs:
@@ -487,7 +487,7 @@ for i in imgs:
     frames.append(new_frame)
 
 # Save the frames as a GIF file that loops forever
-frames[0].save('C:\\Users\\tran_\\Desktop\\Germany Covid-19 Project\\Plot\\infection_case.gif', 
+frames[0].save('./Plot/infection_case.gif', 
             format = 'GIF', 
             append_images = frames[1:], 
             save_all = True,
