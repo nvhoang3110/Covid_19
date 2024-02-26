@@ -494,7 +494,18 @@ frames[0].save('./Plot/infection_case.gif',
             duration = 200, loop = 0)
 ```
 
+Open the GIF file after the machine finished running the code at your designated storage location and we got the following animation. Note that it may take a while to finish one loop since we have quite a lot of frames:
+
 ![Covid-19: 7-day prevalence by federal states](https://github.com/nvhoang3110/Covid_19/blob/3ede540ffd0e153473da8cd5ac110515348535af/Plots/infection_case.gif)
+
+```python
+# Inspect the amount of frames after creating our animation
+print(k)
+```
+
+```python
+1037 # A total of 1036 frames since we start our counter at 1
+```
 
 ### Future work
 
