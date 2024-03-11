@@ -457,10 +457,6 @@ for i in date_dat:
     
     k = k + 1
     plt.close()
-
-    # Additional aesthetic modifications
-    plt.axis("off")
-    plt.tight_layout()
     
     # Save the plot
     filepath = os.path.join(plot_path, "infection_case{}.png".format(str(i)))
