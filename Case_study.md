@@ -9,13 +9,13 @@ In this case study, we will practice our analysis skills as well as using Python
 
 On 27 January 2020, the first Corana case in Germany was confirmed near Munich, Bavaria. Over the course of more than four years, the pandemic has spread rapidly across the country, resulted in millions of infections and deaths. The main aim of this case study is to look back at the published data and analyse the development of the pandemic in Germany in order to gain more insights. 
 
-With our goal in mind, we will use the data officially published by the Federal Statistical Office (Destatis). After downloading the data from the site, we can perform some data cleaning and transforming, followed by visualizing our data in different formats. Let's start the project by downloading and exploring the data set. 
+With our goal in mind, we will use the data officially published by the Federal Statistical Office (Destatis). After downloading the data from the site, we can perform some data cleaning and transforming, followed by visualizing our data in different formats. Let us start the project by downloading and exploring the data set. 
 
 ### Dataset
 
 Covid-19 data in Germany was collected and published by the Federal Statistical Office (Destatis). Over the course of more than four years, the Corona data platform has developed into one of the largest data collections for science. As a result, it is now being expanded into a central platform for the healthcare sector, which is no longer included from the website of the Federal Statistical Office.
 
-You can download the Covid-19 data and other dataset from the central platform for the healthcare [website](https://www.healthcare-datenplattform.de/). It's free for science and research purposes, however you may need to register in order to get access the data. For our case study, we are only interested in the infections federal states (Infektionen Bundesländer) dataset. Here's the [link](https://www.healthcare-datenplattform.de/dataset/infektionen_bundeslaender) for you to download the data directly from the web page. You can also access to the data from the project's repository.
+You can download the Covid-19 data and other dataset from the central platform for the healthcare [website](https://www.healthcare-datenplattform.de/). It is free for science and research purposes, however you may need to register in order to get access the data. For our case study, we are only interested in the infections federal states (Infektionen Bundesländer) dataset. Here's the [link](https://www.healthcare-datenplattform.de/dataset/infektionen_bundeslaender) for you to download the data directly from the web page. You can also access to the data from the project's repository.
 
 #### Get the data into our machine
 
@@ -35,10 +35,10 @@ dat = pd.read_csv(path)
 
 ### Data exploration
 
-Let's take a quick look at what we have at hand. An overview about the dataset could be handy:
+Let us take a quick look at what we have at hand. An overview about the dataset could be handy:
 
 ```python
-# Overview about the dataset. 
+# Overview about the dataset
 dat.info()
 ```
 
@@ -112,7 +112,7 @@ min         0.000000      0.000000     -99.000000       -99.000000
 max    316242.000000   2659.500000  289072.000000      2490.000000
 ```
 
-Here we have some common summary statistics indexes like mean, standard deviation, maximum, minimum, etc... The summary date showed here was aggregated for the entire country over the course of three years. In order to get similar result for each individual state, we need to group the data by federal state first and them apply the summarize:
+Here we have some common summary statistics indexes like mean, standard deviation, maximum, minimum, etc... The summary data showed here was aggregated for the entire country over the course of three years. In order to get similar result for each individual state, we need to group the data by federal state first and them apply the summarize:
 
 ```python
 # Group by federal states and describe
